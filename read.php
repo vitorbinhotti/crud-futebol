@@ -24,8 +24,12 @@ if ($result->num_rows > 0) {
         <td>{$row['numero_camisa']}</td>
         <td>{$row['nome_time']}</td>
         <td>
+        <div class='editar'>
         <a href='update.php?id={$row['id']}'>Editar</a>
+        </div>
+        <div class='excluir'>
         <a href='delete.php?id={$row['id']}'>Excluir</a>
+        </div>
         </td>
     </tr>";
     }
