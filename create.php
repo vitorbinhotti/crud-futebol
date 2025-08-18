@@ -42,6 +42,17 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['create'])) {
 </head>
 
 <body>
+    <a href="times.php" class="btn-topo">Gerenciar Times</a>
+    <a href="create.php?show=partidas"><button type="button">Mostrar Partida</button></a>
+    <br><br>
+    <?php if (isset($_GET['show']) && $_GET['show'] == 'partidas'): ?>
+        <?php include 'partidas.php'; ?>
+        <br>
+        <a href="create.php">Voltar</a>
+        <?php exit; ?>
+    <?php endif; ?>
+
+
     <form method="POST" action="create.php">
         <label for="nome">Nome e Sobrenome:</label>
         <input type="text" name="nome" required>
