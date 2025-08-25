@@ -32,8 +32,8 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 <head>
     <meta charset="UTF-8">
     <title>Adicionar Nova Partida</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="reset.css">
+    <link rel="stylesheet" href="assets/style.css">
+    <link rel="stylesheet" href="assets/reset.css">
 </head>
 
 <body>

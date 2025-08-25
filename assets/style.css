@@ -1,62 +1,81 @@
 body {
-    font-family: 'Roboto', sans-serif;
-    font-size: 14px;
-    background-color: #4e4e4e36;
+    font-family: 'Roboto', Arial, sans-serif;
+    font-size: 15px;
+    background-color: #aaaaaa;
+    margin: 0;
+    padding: 0;
 }
 
 label {
     display: block;
+    margin-bottom: 6px;
+    color: #333;
 }
 
 p {
-    font-size: 20px;
+    font-size: 18px;
     text-align: center;
-    color: #8a0707;
-    margin-bottom: 5px;
+    color: #b22222;
+    margin-bottom: 10px;
 }
 
 form {
-    width: 200px;
-    border: 3px solid #4e4e4e;
-    padding: 15px 15px;
-    border-radius: 5px;
+    width: 350px;
+    margin: 60px auto 0 auto;
+    border: 2px solid #ccc;
+    padding: 20px 25px;
+    border-radius: 8px;
+    background: #fff;
+    box-shadow: 0 6px 24px rgba(0,0,0,0.15), 0 1.5px 4px rgba(0,0,0,0.08);
+    font-weight: bold;
 }
 
 input {
     width: 100%;
+    padding: 8px;
+    margin-bottom: 12px;
+    border: 1px solid #bbb;
+    border-radius: 4px;
+    box-sizing: border-box;
 }
 
 input[type="submit"] {
     height: 40px;
-    background-color: #a8a8a8;
+    background-color: #4e4e4e;
+    color: #fff;
     border-radius: 4px;
-    border: 1px solid black;
+    border: none;
     cursor: pointer;
-    transition: 0.3s;
+    transition: background 0.3s, color 0.3s;
+    font-size: 16px;
     font-weight: bold;
 }
 
 input[type="submit"]:hover {
     background-color: #00f335;
-    color: rgb(0, 0, 0);
-}
-
-form {
-    width: 400px;
-    margin: 0 auto;
-    margin-top: 60px;
-    font-weight: bold;
+    color: #222;
 }
 
 table {
-    font-size: 20px;
+    font-size: 17px;
     text-align: center;
-    width: 60%;
-    height: 300px;
-    margin: 0 auto;
-    margin-top: 20px;
-    border: 3px solid #4e4e4e;
-    border-radius: 5px;
+    width: 70%;
+    margin: 30px auto 0 auto;
+    border: 2px solid #000000;
+    border-radius: 6px;
+    background: #fff;
+    box-shadow: 0 6px 24px rgba(0,0,0,0.15), 0 1.5px 4px rgba(0,0,0,0.08);
+    border-collapse: collapse;
+}
+
+th, td {
+    padding: 10px 8px;
+    border-bottom: 1px solid #eee;
+}
+
+th {
+    background: #f0f0f0;
+    color: #333;
 }
 
 table a {
@@ -71,8 +90,9 @@ table a {
 }
 
 .editar a {
-    color: green;
-    transition: 0.3s;
+    color: #228B22;
+    font-weight: bold;
+    transition: color 0.3s;
 }
 
 .editar a:hover {
@@ -80,8 +100,9 @@ table a {
 }
 
 .excluir a {
-    color: red;
-    transition: 0.3s;
+    color: #b22222;
+    font-weight: bold;
+    transition: color 0.3s;
 }
 
 .excluir a:hover {
@@ -90,62 +111,32 @@ table a {
 
 .botoes-topo {
     text-align: center;
-    margin-right: 10px;
     width: 100%;
-    margin-top: 20px;
-    margin-bottom: 20px;
+    margin: 25px 0 20px 0;
 }
 
-.btn-times {
-    margin-right: 10px;
+.btn-times,
+.btn-partida,
+.btn-voltar,
+.btn-nova-partida {
     display: inline-block;
     padding: 10px 24px;
-    margin: 10px 10px 0 0;
-    font-size: 16px;
+    font-size: 15px;
     font-weight: bold;
     background-color: #4e4e4e;
     color: #fff;
     border: none;
     border-radius: 6px;
     text-decoration: none;
-    transition: background 0.3s, color 0.3s;
-}
-
-.btn-times:hover {
-    background-color: #00f335;
-    color: #222;
-}
-
-.btn-partida {
-    padding: 10px 24px;
-    font-size: 16px;
-    font-weight: bold;
-    background-color: #4e4e4e;
-    color: #fff;
-    border: none;
+    margin: 0 8px 8px 0;
     cursor: pointer;
-    border-radius: 6px;
     transition: background 0.3s, color 0.3s;
 }
 
-.btn-partida:hover {
-    background-color: #00f335;
-    color: #222;
-}
-
-.btn-voltar {
-    padding: 10px 24px;
-    font-size: 16px;
-    font-weight: bold;
-    background-color: #4e4e4e;
-    color: #fff;
-    border: none;
-    text-decoration: none;
-    border-radius: 6px;
-    transition: 0.3s;
-}
-
-.btn-voltar:hover {
+.btn-times:hover,
+.btn-partida:hover,
+.btn-voltar:hover,
+.btn-nova-partida:hover {
     background-color: #00f335;
     color: #222;
 }
@@ -153,27 +144,7 @@ table a {
 .titulo-times {
     font-weight: bold;
     text-align: center;
-    font-size: 40px;
-    margin-bottom: 20px;
+    font-size: 32px;
+    margin: 30px 0 15px 0;
+    color: #333;
 }
-
-.btn-nova-partida {
-    display: flex;
-    align-items: center;
-    padding: 10px 24px;
-    margin-top: 20px;
-    font-size: 16px;
-    font-weight: bold;
-    background-color: #4e4e4e;
-    color: #fff;
-    border: none;
-    text-decoration: none;
-    border-radius: 6px;
-    transition: 0.3s;
-}
-
-.btn-nova-partida:hover {
-    background-color: #00f335;
-    color: #222;
-}
-

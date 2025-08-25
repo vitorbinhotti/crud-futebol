@@ -35,8 +35,8 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['create'])) {
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Crud Futebol</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="reset.css">
+    <link rel="stylesheet" href="assets/style.css">
+    <link rel="stylesheet" href="assets/reset.css">
 </head>
 <body>
     <div class="botoes-topo">
