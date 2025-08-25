@@ -22,8 +22,36 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $sql = "UPDATE jogadores SET nome = '$nome', posicao = '$posicao', numero_camisa = '$numero_camisa', time_id = '$time_id' WHERE id = $id";
 
     if ($conn->query($sql) == true) {
-        echo "Novo Atualização no Banco! <br>";
-        echo "<a href='create.php'>Ok</a>";
+    echo 
+    "<div style='
+        background-color: #d4edda; 
+        color: #155724; 
+        padding: 15px; 
+        margin: 20px 0; 
+        border: 2px solid #c3e6cb; 
+        border-radius: 8px; 
+        font-weight: bold; 
+        text-align: center; 
+        font-size: 18px;'>
+        Nova Atualização no Banco! 
+    <br><br>
+    <a href='create.php' style='
+        display: inline-block;
+        background-color: #28a745;
+        color: white;
+        padding: 10px 20px;
+        border-radius: 6px;
+        text-decoration: none;
+        font-size: 16px;
+        font-weight: bold;
+        transition: 0.2s;
+    ' 
+    onmouseover=\"this.style.backgroundColor='#218838'\" 
+    onmouseout=\"this.style.backgroundColor='#28a745'\">
+        Ok
+    </a>
+</div>";
+
     } else {
         echo "Erro: " . $sql . "<br>" . $conn->error;
     }
@@ -73,7 +101,7 @@ $row = $result->fetch_assoc();
             <option value="">Selecione um time</option>
             <?php foreach ($times as $time): ?>
                 <option value="<?php echo $time['id']; ?>"><?php echo htmlspecialchars($time['nome']); ?></option>
-            <?php endforeach; ?> 
+            <?php endforeach; ?>
         </select>
         <br><br>
         <input type="submit" value="Atualizar">
@@ -91,4 +119,3 @@ $row = $result->fetch_assoc();
 </body>
 
 </html>
-

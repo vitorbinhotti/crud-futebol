@@ -27,3 +27,5 @@ CREATE TABLE partidas (
     FOREIGN KEY (time_fora_id) REFERENCES times(id)
 );
 
+
+

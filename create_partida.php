@@ -26,35 +26,48 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 }
 ?>
 
-<h2>Adicionar Nova Partida</h2>
-<form method="POST">
-    <label>Time Casa:</label>
-    <select name="time_casa" required>
-        <option value="">Selecione</option>
-        <?php foreach ($times as $time): ?>
-            <option value="<?= $time['id'] ?>"><?= htmlspecialchars($time['nome']) ?></option>
-        <?php endforeach; ?>
-    </select>
-    <br><br>
-    <label>Time Fora:</label>
-    <select name="time_fora" required>
-        <option value="">Selecione</option>
-        <?php foreach ($times as $time): ?>
-            <option value="<?= $time['id'] ?>"><?= htmlspecialchars($time['nome']) ?></option>
-        <?php endforeach; ?>
-    </select>
-    <br><br>
-    <label>Data do Jogo:</label>
-    <input type="date" name="data_jogo" required>
-    <br><br>
-    <label>Gols Casa:</label>
-    <input type="number" name="gols_casa" value="0" required>
-    <br><br>
-    <label>Gols Fora:</label>
-    <input type="number" name="gols_fora" value="0" required>
-    <br><br>
-    <input type="submit" value="Adicionar Partida">
-</form>
-<br>
-<a href="create.php?show=partidas">Voltar para Partidas</a>
-?>
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Adicionar Nova Partida</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="reset.css">
+</head>
+
+<body>
+    <h2 class="titulo-times">Adicionar Nova Partida</h2>
+    <form method="POST">
+        <label>Time Casa:</label>
+        <select name="time_casa" required>
+            <option value="">Selecione</option>
+            <?php foreach ($times as $time): ?>
+                <option value="<?= $time['id'] ?>"><?= htmlspecialchars($time['nome']) ?></option>
+            <?php endforeach; ?>
+        </select>
+        <br><br>
+        <label>Time Fora:</label>
+        <select name="time_fora" required>
+            <option value="">Selecione</option>
+            <?php foreach ($times as $time): ?>
+                <option value="<?= $time['id'] ?>"><?= htmlspecialchars($time['nome']) ?></option>
+            <?php endforeach; ?>
+        </select>
+        <br><br>
+        <label>Data do Jogo:</label>
+        <input type="date" name="data_jogo" required>
+        <br><br>
+        <label>Gols Casa:</label>
+        <input type="number" name="gols_casa" value="0" required>
+        <br><br>
+        <label>Gols Fora:</label>
+        <input type="number" name="gols_fora" value="0" required>
+        <br><br>
+        <input type="submit" value="Adicionar Partida">
+    </form>
+    <br>
+    <a href="create.php?show=partidas" class="btn-voltar">Voltar para Partidas</a>
+</body>
+
+</html>

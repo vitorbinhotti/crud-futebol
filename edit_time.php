@@ -18,16 +18,29 @@ $result = $conn->query("SELECT * FROM times WHERE id=$id");
 $row = $result->fetch_assoc();
 ?>
 
-<h2>Editar Time</h2>
-<form method="POST">
-    <label>Nome do Time:</label>
-    <input type="text" name="nome" value="<?= htmlspecialchars($row['nome']) ?>" required>
-    <br><br>
-    <label>Cidade:</label>
-    <input type="text" name="cidade" value="<?= htmlspecialchars($row['cidade']) ?>" required>
-    <br><br>
-    <input type="submit" value="Salvar Alterações">
-</form>
-<br>
-<a href="times.php">Voltar para Times</a>
-?>
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Editar Time</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="reset.css">
+</head>
+
+<body>
+    <h2 class="titulo-times">Editar Time</h2>
+    <form method="POST">
+        <label>Nome do Time:</label>
+        <input type="text" name="nome" value="<?= htmlspecialchars($row['nome']) ?>" required>
+        <br><br>
+        <label>Cidade:</label>
+        <input type="text" name="cidade" value="<?= htmlspecialchars($row['cidade']) ?>" required>
+        <br><br>
+        <input type="submit" value="Salvar Alterações">
+    </form>
+    <br>
+    <a href="times.php" class="btn-voltar">Voltar para Times</a>
+</body>
+
+</html>
